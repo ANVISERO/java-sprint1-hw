@@ -53,6 +53,7 @@ public class StepTracker {
             return;
         }
         goalByStepsPerDay = steps;
+        System.out.println("Цель сохранена. Текущая цель по количеству шагов за день: " + goalByStepsPerDay);
     }
 
     // Вывод статистики по определённому месяцу
@@ -79,5 +80,10 @@ public class StepTracker {
         System.out.println("Количество сожжённых килокалорий за месяц: " + converter.convertStepsToKilocalories(sumSteps));
         System.out.println("Лучшая серия: " + monthData.bestSeries(goalByStepsPerDay)); // вывод лучшей серии
         System.out.println(); //дополнительный перенос строки
+    }
+
+    // Возвращает текущую цель по количеству шагов за день
+    int getGoalByStepsPerDay() {
+        return goalByStepsPerDay;
     }
 }

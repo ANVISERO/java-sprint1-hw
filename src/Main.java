@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 
@@ -14,6 +16,7 @@ public class Main {
             if (i == 1) {
                 stepTracker.addNewNumberStepsPerDay();
             } else if (i == 2) {
+                System.out.println("Текущая цель по количеству шагов: " + stepTracker.getGoalByStepsPerDay());
                 System.out.println("Введите новую цель по количеству шагов: ");
                 stepTracker.changeStepGoal(scanner.nextInt());
             } else if (i == 3) {
